@@ -1,0 +1,114 @@
+.bookings-container {
+  padding-bottom: 2rem;
+}
+
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.booking-card {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.customer-name {
+  color: var(--primary);
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.booking-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.booking-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-detail .label {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* DatePicker customizations */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected {
+  background-color: var(--secondary);
+}
+
+.react-datepicker__day--selected, 
+.react-datepicker__day--in-selecting-range, 
+.react-datepicker__day--in-range {
+  background-color: var(--secondary);
+}
+
+.react-datepicker__day--selected:hover, 
+.react-datepicker__day--in-selecting-range:hover, 
+.react-datepicker__day--in-range:hover {
+  background-color: var(--secondary);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .bookings-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .booking-info {
+    grid-template-columns: 1fr;
+  }
+}
